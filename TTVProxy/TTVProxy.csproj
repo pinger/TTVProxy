@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: D:\Tools\ttvproxy_2030\TTVProxy.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D68FB4A7-5F81-4E2D-AB21-9DD5E78404EB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>TTVProxy</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <ApplicationVersion>2.0.3.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>TTVProxy</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="XmlSettings, Version=0.1.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\XmlSettings.0.1.3\lib\net40\XmlSettings.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="SettingManager.cs" />
+    <Compile Include="TTVProxyDevice.cs" />
+    <Compile Include="ExtPlayList.cs" />
+    <Compile Include="PlaylistTempate.cs" />
+    <Compile Include="TorrentStream.cs" />
+    <Compile Include="TSMessage.cs" />
+    <Compile Include="TtvProxy.cs" />
+    <Compile Include="VlcClient.cs" />
+    <Compile Include="VlcSyntaxError.cs" />
+    <Compile Include="VlcStopError.cs" />
+    <Compile Include="VlcStartError.cs" />
+    <Compile Include="VlcConnectError.cs" />
+    <Compile Include="VlcError.cs" />
+    <Compile Include="TTVApi\ApiFunction.cs" />
+    <Compile Include="TTVApi\AppVersion.cs" />
+    <Compile Include="TTVApi\Auth.cs" />
+    <Compile Include="TTVApi\AllTranslation.cs" />
+    <Compile Include="TTVApi\GetStream.cs" />
+    <Compile Include="TTVApi\GetEpg.cs" />
+    <Compile Include="TTVApi\FavouriteAdd.cs" />
+    <Compile Include="TTVApi\FavouriteDel.cs" />
+    <Compile Include="TTVApi\ArcGetChannels.cs" />
+    <Compile Include="TTVApi\ArcGetStreem.cs" />
+    <Compile Include="TTVApi\ArcGetRecords.cs" />
+    <Compile Include="TTVApi\TranslationScreen.cs" />
+    <Compile Include="TTVApi\ApiError.cs" />
+    <Compile Include="TTVApi\StreamSource.cs" />
+    <Compile Include="TTVApi\Archive.cs" />
+    <Compile Include="TTVApi\Category.cs" />
+    <Compile Include="TTVApi\Channel.cs" />
+    <Compile Include="TTVApi\AccessTranslation.cs" />
+    <Compile Include="TTVApi\ChannelsType.cs" />
+    <Compile Include="TTVApi\ChannelScreen.cs" />
+    <Compile Include="TTVApi\Epg.cs" />
+    <Compile Include="Http\Server\MediaType.cs" />
+    <Compile Include="Http\Server\HttpMime.cs" />
+    <Compile Include="Http\Server\HttpMimeDictionary.cs" />
+    <Compile Include="Http\Server\MyWebRequest.cs" />
+    <Compile Include="Http\Server\MyWebResponse.cs" />
+    <Compile Include="Http\Server\WebServer.cs" />
+    <Compile Include="Http\Server\HttpMethod.cs" />
+    <Compile Include="Http\Server\HttpHeader.cs" />
+    <Compile Include="Http\Content\EpgContentProvider.cs" />
+    <Compile Include="Http\Content\ChannelContentProvider.cs" />
+    <Compile Include="Http\Content\ContentProvider.cs" />
+    <Compile Include="Http\Content\Playlist.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="pltempl\autom3u.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="pltempl\filepl.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="pltempl\m3u.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="pltempl\urlpl.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CryptoLibrary\CryptoLibrary.csproj">
+      <Project>{54e516ca-8ea1-4c76-b16f-f780702360dd}</Project>
+      <Name>CryptoLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SimpleLogger\SimpleLogger.csproj">
+      <Project>{3edc27c2-3d8f-48dd-8c7a-a87c8735952a}</Project>
+      <Name>SimpleLogger</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
