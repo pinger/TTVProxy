@@ -2,13 +2,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TTVProxy", "TTVProxy.csproj", "{D68FB4A7-5F81-4E2D-AB21-9DD5E78404EB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TTVProxy", "src\TTVProxy\TTVProxy.csproj", "{D68FB4A7-5F81-4E2D-AB21-9DD5E78404EB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TTVProxy_console", "..\TTVProxy_console\TTVProxy_console.csproj", "{B4DF7A24-F2B7-42E5-B74A-59F603E240DE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TTVProxy_console", "src\TTVProxy_console\TTVProxy_console.csproj", "{B4DF7A24-F2B7-42E5-B74A-59F603E240DE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleLogger", "..\SimpleLogger\SimpleLogger.csproj", "{3EDC27C2-3D8F-48DD-8C7A-A87C8735952A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleLogger", "src\SimpleLogger\SimpleLogger.csproj", "{3EDC27C2-3D8F-48DD-8C7A-A87C8735952A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CryptoLibrary", "..\CryptoLibrary\CryptoLibrary.csproj", "{54E516CA-8EA1-4C76-B16F-F780702360DD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CryptoLibrary", "src\CryptoLibrary\CryptoLibrary.csproj", "{54E516CA-8EA1-4C76-B16F-F780702360DD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
