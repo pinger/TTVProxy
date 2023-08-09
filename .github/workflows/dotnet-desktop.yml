@@ -33,3 +33,9 @@ jobs:
 
     - name: Compress artifact
       run: Compress-Archive -Path .\src\TTVProxy_console\bin\Release\* -Destination .\TTVProxy_console-0.0.${{ github.run_number }}.zip
+
+    - uses: actions/upload-artifact@v3
+      name: Upload artifact
+      with:
+        name: TTVProxy_console-0.0.${{ github.run_number }}
+        path: .\TTVProxy_console-0.0.${{ github.run_number }}.zip
