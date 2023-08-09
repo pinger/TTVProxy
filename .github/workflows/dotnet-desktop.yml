@@ -31,8 +31,5 @@ jobs:
     - name: Build solution
       run: msbuild TTVProxy.sln -t:rebuild -property:Configuration=Release
 
-    - name: Show content
-      run: dir .\src\TTVProxy_console\bin\Release\
-
-    - name: Display Build Number
-      run: echo ${{ github.run_number }}
+    - name: Compress artifact
+      run: Compress-Archive -Path .\src\TTVProxy_console\bin\Release\* -Destination .\TTVProxy_console-0.0.${{ github.run_number }}.zip
