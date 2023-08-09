@@ -30,3 +30,6 @@ jobs:
 
     - name: Build solution
       run: msbuild TTVProxy.sln -t:rebuild -property:Configuration=Release
+
+    - name: Show content
+      run: dir .\src\TTVProxy_console\bin\Release\
