@@ -35,4 +35,4 @@ jobs:
       run: dir .\src\TTVProxy_console\bin\Release\
 
     - name: Display Build Number
-      run: echo "Build Number: ${{ github.run_number }}"
+      run: echo ${{ github.run_number }}
